@@ -1,0 +1,17 @@
+name: demo-crystal-kemal
+version: 0.1.0
+
+authors:
+  - Vitaliy Emeliyantsev <gambala.rus@gmail.com>
+
+targets:
+  demo-crystal-kemal:
+    main: src/demo-crystal-kemal.cr
+
+crystal: '>= 1.13.1'
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal

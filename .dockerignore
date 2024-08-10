@@ -1,0 +1,21 @@
+# Binaries
+/server
+
+# Dependencies
+lib/
+libs/
+
+# Crystal cache
+.crystal/
+
+# Docker related files
+.dockerignore
+Dockerfile
+
+# Git
+.git
+.gitignore
+
+# Environment files (except templates)
+/.env*
+!/.env*.erb
