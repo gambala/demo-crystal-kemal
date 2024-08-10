@@ -1,0 +1,17 @@
+service: demo-crystal-kemal
+image: gambala/demo-crystal-kemal
+servers:
+  - <%= ENV["MAIN_SERVER_IP"] %>
+labels:
+  traefik.http.routers.demo-crystal-kemal-web.rule: Host(`kemal.gambala.pro`)
+registry:
+  server: ghcr.io
+  username: gambala
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+healthcheck:
+  interval: 10s
+  path: /
+  port: 3000
+builder:
+  multiarch: false

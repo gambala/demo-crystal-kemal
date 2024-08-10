@@ -13,6 +13,9 @@ COPY . .
 RUN shards build demo-crystal-kemal --static
 
 FROM alpine:3.19
+# Install curl for Kamal health checks
+RUN apk add curl
 WORKDIR /
 COPY --from=build /app/bin/demo-crystal-kemal .
+EXPOSE 3000
 CMD ["/demo-crystal-kemal"]
